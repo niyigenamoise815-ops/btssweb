@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Bigogwe TSS</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+<section class="contact-container">
+
+    <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you.</p>
+
+        <div class="info-box">
+            <p><strong>📞 Phone:</strong> +250785564487</p>
+            <p><strong>📧 Email:</strong> bigogwetvetschool@gmail.com</p>
+            <p><strong>📍 Location:</strong> Bigogwe, Rwanda</p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <form action="https://formspree.io/f/mvzbbqyy" method="POST" onsubmit="showMessage()">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="full_name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Message</label>
+                <textarea name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+
+    const btn = document.querySelector(".theme-toggle");
+    if(document.body.classList.contains("dark-mode")){
+        btn.textContent = "☀️";
+    } else {
+        btn.textContent = "🌙";
+    }
+}
+
+function showMessage(){
+    setTimeout(() => {
+        document.getElementById("successMessage").style.display = "block";
+    }, 500);
+}
+</script>
+
+</body>
+</html>
