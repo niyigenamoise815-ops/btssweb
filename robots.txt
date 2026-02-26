@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bigogweweb.netlify.app/sitemap.xml
